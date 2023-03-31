@@ -20,6 +20,14 @@ mkdir dist/icons
 # Build SVG icons
 npx @babel/node bin/build-svgs.js
 
+# Prepare outlined SVGs
+mkdir dist/outline-icons
+npx @babel/node bin/prepare-outlines.js
+
+# Build icon fonts
+npx fantasticon
+npx rimraf dist/outline-icons
+
 # Build JavaScript library
 npx webpack --output-filename feather.js --mode development
 npx webpack --output-filename feather.min.js --mode production

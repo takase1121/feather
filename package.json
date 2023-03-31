@@ -58,6 +58,7 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.5.0",
     "eslint-plugin-prettier": "^2.5.0",
+    "fantasticon": "^2.0.0",
     "html-minifier": "^3.5.8",
     "husky": "^8.0.3",
     "jest": "^22.4.4",
