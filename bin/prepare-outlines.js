@@ -1,6 +1,6 @@
 import path from 'path';
 import { spawnSync } from 'child_process';
-import { rmSync, mkdirSync, copyFileSync, readdirSync } from 'fs';
+import { copyFileSync, readdirSync } from 'fs';
 
 const OUTPUT_DIR = path.resolve(__dirname, '../dist/outline-icons');
 const INPUT_DIR = path.resolve(__dirname, '../icons');
