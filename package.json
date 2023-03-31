@@ -23,6 +23,7 @@
     }
   },
   "jest": {
+    "testURL": "http://localhost/",
     "collectCoverageFrom": [
       "src/**/*.js"
     ]
