@@ -28,6 +28,18 @@
       "src/**/*.js"
     ]
   },
+  "release": {
+    "publish": [
+      {
+        "path": "@semantic-release/github",
+        "assets": [
+          {
+            "path": "feather-icons.zip"
+          }
+        ]
+      }
+    ]
+  }
   "dependencies": {
     "classnames": "^2.2.5",
     "core-js": "^3.1.3"

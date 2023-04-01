@@ -16,9 +16,12 @@ jobs:
       run: sudo apt-get update && sudo apt-get install -y inkscape zip
     - run: npm ci
     - run: npm run all
-    - name: Set environment variable for forks
+    - name: Set up environment for forks
       if: github.ref_name == 'master' && github.event.pull_request.head.repo.full_name != github.repository
-      run: echo "GITHUB_ONLY='--verify-conditions @semantic-release/github --publish @semantic-release/github'" >> $GITHUB_ENV
+      run: |
+        echo "GITHUB_ONLY='--verify-conditions @semantic-release/github --publish @semantic-release/github'" >> $GITHUB_ENV
+        cd dist/
+        zip -r ../feather-icons.zip *
     - name: Release
       if: github.ref_name == 'master'
       run: npx semantic-release
