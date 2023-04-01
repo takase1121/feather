@@ -19,12 +19,17 @@ jobs:
     - name: Set up environment for forks
       if: github.ref_name == 'master' && github.event.pull_request.head.repo.full_name != github.repository
       run: |
-        echo "GITHUB_ONLY='--verify-conditions @semantic-release/github --publish @semantic-release/github'" >> $GITHUB_ENV
+        echo "GITHUB_ONLY=true" > "$GITHUB_ENV"
         cd dist/
         zip -r ../feather-icons.zip *
     - name: Release
       if: github.ref_name == 'master'
-      run: npx semantic-release
+      run: |
+        declare -a ARGS
+        if [[ $GITHUB_ONLY = true ]]; then
+          ARGS+=(--debug --verify-conditions '@semantic-release/github' --publish '@semantic-release/github')
+        fi
+        npx semantic-release "${ARGS[@]}"
       env:
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
