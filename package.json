@@ -38,7 +38,9 @@
       [
         "@semantic-release/github",
         {
-          "assets": ["feather-icons.zip"],
+          "assets": [
+            "feather-icons.zip"
+          ],
           "successComment": false,
           "failTitle": false
         }
