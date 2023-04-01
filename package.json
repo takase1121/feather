@@ -29,16 +29,17 @@
     ]
   },
   "release": {
-    "plugins": ["@semantic-release/commit-analyzer", "@semantic-release/release-notes-generator", "@semantic-release/github"],
-    "publish": [
-      {
-        "path": "@semantic-release/github",
-        "assets": [
-          {
-            "path": "feather-icons.zip"
-          }
-        ]
-      }
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/github",
+        {
+          "assets": ["feather-icons.zip"],
+          "successComment": false,
+          "failTitle": false
+        }
+      ]
     ]
   },
   "dependencies": {
