@@ -1,4 +1,4 @@
-import Svgo from 'svgo';
+import svgo from 'svgo';
 import cheerio from 'cheerio';
 import { format } from 'prettier';
 
@@ -26,17 +26,17 @@ function processSvg(svg) {
  * @returns {Promise<string>}
  */
 function optimize(svg) {
-  const svgo = new Svgo({
-    plugins: [
-      { convertShapeToPath: false },
-      { mergePaths: false },
-      { removeAttrs: { attrs: '(fill|stroke.*)' } },
-      { removeTitle: true },
-    ],
-  });
-
   return new Promise(resolve => {
-    svgo.optimize(svg, ({ data }) => resolve(data));
+    resolve(
+      svgo.optimize(svg, {
+        plugins: [
+          { name: 'convertShapeToPath', params: false },
+          { name: 'mergePaths', params: false },
+          { name: 'removeAttrs', params: { attrs: '(fill|stroke.*)' } },
+          { name: 'removeTitle', params: true },
+        ],
+      }).data,
+    );
   });
 }
 
