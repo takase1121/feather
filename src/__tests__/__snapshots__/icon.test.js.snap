@@ -2,7 +2,7 @@
 
 exports[`constructs icon object correctly 1`] = `
 Icon {
-  "attrs": Object {
+  "attrs": {
     "class": "feather feather-test",
     "fill": "none",
     "height": 24,
@@ -14,9 +14,9 @@ Icon {
     "width": 24,
     "xmlns": "http://www.w3.org/2000/svg",
   },
-  "contents": "<line x1=\\"23\\" y1=\\"1\\" x2=\\"1\\" y2=\\"23\\" /><line x1=\\"1\\" y1=\\"1\\" x2=\\"23\\" y2=\\"23\\" />",
+  "contents": "<line x1="23" y1="1" x2="1" y2="23" /><line x1="1" y1="1" x2="23" y2="23" />",
   "name": "test",
-  "tags": Array [
+  "tags": [
     "hello",
     "world",
     "foo",
@@ -27,7 +27,7 @@ Icon {
 
 exports[`constructs icon object correctly 2`] = `
 Icon {
-  "attrs": Object {
+  "attrs": {
     "class": "feather feather-test",
     "fill": "none",
     "height": 24,
@@ -39,16 +39,16 @@ Icon {
     "width": 24,
     "xmlns": "http://www.w3.org/2000/svg",
   },
-  "contents": "<line x1=\\"23\\" y1=\\"1\\" x2=\\"1\\" y2=\\"23\\" /><line x1=\\"1\\" y1=\\"1\\" x2=\\"23\\" y2=\\"23\\" />",
+  "contents": "<line x1="23" y1="1" x2="1" y2="23" /><line x1="1" y1="1" x2="23" y2="23" />",
   "name": "test",
-  "tags": Array [],
+  "tags": [],
 }
 `;
 
-exports[`toString() returns correct string 1`] = `"<line x1=\\"23\\" y1=\\"1\\" x2=\\"1\\" y2=\\"23\\" /><line x1=\\"1\\" y1=\\"1\\" x2=\\"23\\" y2=\\"23\\" />"`;
+exports[`toString() returns correct string 1`] = `"<line x1="23" y1="1" x2="1" y2="23" /><line x1="1" y1="1" x2="23" y2="23" />"`;
 
-exports[`toSvg() returns correct string 1`] = `"<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" fill=\\"none\\" stroke=\\"currentColor\\" stroke-width=\\"2\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" class=\\"feather feather-test\\"><line x1=\\"23\\" y1=\\"1\\" x2=\\"1\\" y2=\\"23\\" /><line x1=\\"1\\" y1=\\"1\\" x2=\\"23\\" y2=\\"23\\" /></svg>"`;
+exports[`toSvg() returns correct string 1`] = `"<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-test"><line x1="23" y1="1" x2="1" y2="23" /><line x1="1" y1="1" x2="23" y2="23" /></svg>"`;
 
-exports[`toSvg() returns correct string 2`] = `"<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" fill=\\"none\\" stroke=\\"currentColor\\" stroke-width=\\"1\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" class=\\"feather feather-test\\" color=\\"red\\"><line x1=\\"23\\" y1=\\"1\\" x2=\\"1\\" y2=\\"23\\" /><line x1=\\"1\\" y1=\\"1\\" x2=\\"23\\" y2=\\"23\\" /></svg>"`;
+exports[`toSvg() returns correct string 2`] = `"<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-test" color="red"><line x1="23" y1="1" x2="1" y2="23" /><line x1="1" y1="1" x2="23" y2="23" /></svg>"`;
 
-exports[`toSvg() returns correct string 3`] = `"<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" fill=\\"none\\" stroke=\\"currentColor\\" stroke-width=\\"2\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" class=\\"feather feather-test foo bar\\" color=\\"red\\"><line x1=\\"23\\" y1=\\"1\\" x2=\\"1\\" y2=\\"23\\" /><line x1=\\"1\\" y1=\\"1\\" x2=\\"23\\" y2=\\"23\\" /></svg>"`;
+exports[`toSvg() returns correct string 3`] = `"<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-test foo bar" color="red"><line x1="23" y1="1" x2="1" y2="23" /><line x1="1" y1="1" x2="23" y2="23" /></svg>"`;
